@@ -28,7 +28,7 @@
 <meta property="og:description" content="关于Alicia 极普通的魔法使，不怎么安定，略微偏执。 会一点点数学,偶尔会捣鼓一下人偶技艺（指炼丹） 本科生，现就读 $ Math@SJTU $ 兴趣方向：计算神经&#x2F;AI 最高理想是制作自律人偶。 关于博客 建立博客的初衷是督促自己整理笔记和文档 同时也是为了给自己的过去留下一点痕迹，抵抗不断失去的记忆。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-12T10:39:51.000Z">
-<meta property="article:modified_time" content="2022-03-12T13:50:24.824Z">
+<meta property="article:modified_time" content="2022-03-12T15:42:00.620Z">
 <meta property="article:author" content="Alicia_Margatroid">
 <meta name="twitter:card" content="summary">
 
@@ -349,6 +349,61 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
