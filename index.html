@@ -151,6 +151,248 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wortalicia.github.io/2022/04/29/Theory/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Alicia_Margatroid">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alicia's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/29/Theory/" class="post-title-link" itemprop="url">课程笔记-环论(2022-04-27~29)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-29 15:33:43 / 修改时间：23:47:58" itemprop="dateCreated datePublished" datetime="2022-04-29T15:33:43+08:00">2022-04-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>前言：在博客建好以后将近一个月，Alicia终于想起了要在博客上写笔记的计划......</p>
+<p>SJTU抽象代数课程环论部分的笔记</p>
+<h2 id="基本概念4-27尚未补完">基本概念(4-27)(尚未补完)</h2>
+<h3 id="环的定义与性质">环的定义与性质</h3>
+<h4 id="定义">定义</h4>
+<p> 对于非空集合<span class="math inline">\(R\)</span>，在<span class="math inline">\(R\)</span>上定义运算<span class="math inline">\(+\)</span>，<span class="math inline">\(\cdot\)</span> 满足：</p>
+<p><span class="math inline">\((R1)\)</span> <span class="math inline">\((R,+)\)</span>是Abel群</p>
+<p><span class="math inline">\((R2)\)</span> <span class="math inline">\((R,\cdot)\)</span>是半群</p>
+<p><span class="math inline">\((R3)\)</span> 左右分配律成立，即</p>
+<p><span class="math display">\[
+\forall a,b,c\in R, a\cdot(b+c)=a\cdot b+a\cdot c,(b+c)\cdot a=b\cdot a+c\cdot a
+\]</span></p>
+<p>那么则称<span class="math inline">\((R,+,\cdot)\)</span>为一个环(ring)，简称<span class="math inline">\(R\)</span>为环</p>
+<h5 id="补充说明">补充说明</h5>
+<ol type="1">
+<li><p>若<span class="math inline">\((R,\cdot)\)</span> 交换，则称之为交换环，否则称非交换环。</p></li>
+<li><p><span class="math inline">\((R,+)\)</span>中的单位元称为0元，记为0</p>
+<p><span class="math inline">\(a\)</span>关于<span class="math inline">\(+\)</span>的逆元称为负元，记为<span class="math inline">\(-a\)</span></p></li>
+<li><p>0元、负元唯一。</p></li>
+<li><p>若<span class="math inline">\((R,\cdot)\)</span>有单位元，记为<span class="math inline">\(1_R\)</span>（或1）(即<span class="math inline">\(\forall a\in R,a\cdot 1=1\cdot a=a\)</span>）称<span class="math inline">\(R\)</span>是有单位元的环。（<span class="math inline">\((R,\cdot)\)</span>为幺半群）</p></li>
+</ol>
+<h4 id="例子">例子</h4>
+<ol type="1">
+<li><p><span class="math inline">\(R=\{0\}\)</span>，称<span class="math inline">\(R\)</span>为零环（单位元和<span class="math inline">\(0\)</span>元均为<span class="math inline">\(0\)</span>）</p></li>
+<li><p><span class="math inline">\((\Z,+,\times),\)</span> <span class="math inline">\((\mathbb{Q},+,\times),(\R,+,\times),(\mathbb{C},+,\times)\)</span>均成（交换）环（单位元为<span class="math inline">\(1\)</span>,零元为<span class="math inline">\(0\)</span>）</p></li>
+<li><p><span class="math inline">\(\mathbb{F}\)</span>上的全矩阵环：<span class="math inline">\(\mathbb{M}_n(\mathbb{F})\)</span>关于矩阵乘法，矩阵加法作成环，不交换（单位元<span class="math inline">\(I_n\)</span>，零元为<span class="math inline">\(0\)</span>矩阵）</p></li>
+<li><p>模<span class="math inline">\(n\)</span>的剩余类环<span class="math inline">\(\Z_n\)</span>：定义加法：<span class="math inline">\(\overline{a}+\overline{b}=\overline{a+b}\)</span>，定义乘法：<span class="math inline">\(\overline{a}\cdot\overline{b}=\overline{ab}\)</span>。</p>
+<ol type="1">
+<li><p><span class="math inline">\((\Z_n,+,\cdot)\)</span>成（交换）环</p></li>
+<li><p>零元：<span class="math inline">\(\overline{0}\)</span>，单位元：<span class="math inline">\(\overline{1}\)</span></p></li>
+</ol></li>
+<li><p>整系数多项式环<span class="math inline">\(\Z[x]\)</span>：<span class="math inline">\(\Z[x]\)</span>关于多项式的加法和乘法成（交换）环（单位元<span class="math inline">\(f\equiv1\)</span>,零元<span class="math inline">\(0\)</span>函数）</p></li>
+<li><p><span class="math inline">\([a,b]\)</span>上的连续函数环：<span class="math inline">\(C[a,b]\)</span>关于函数的加法和乘法成环</p></li>
+<li><p>环的直和：<span class="math inline">\(R_1,\cdots,R_n\)</span>为<span class="math inline">\(n\)</span>个环，令<span class="math inline">\(R=R_1\oplus R_2\oplus\cdots\oplus R_n=\{(a_1,a_2,\cdots,a_n)|a_i\in R_i,i=1,\cdots,n\}\)</span>则<span class="math inline">\(R\)</span>关于逐项加法（各分量逐项按照<span class="math inline">\(R_i\)</span>中的加法相加）和逐项乘法（各分量逐项按照<span class="math inline">\(R_i\)</span>中的乘法相乘）成环。</p>
+<ol type="1">
+<li><p>显然<span class="math inline">\(R\)</span>交换<span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(R_i\)</span>交换 <span class="math inline">\(i=1,\cdots,n\)</span></p></li>
+<li><p><span class="math inline">\(R\)</span>有单位元<span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(R_i\)</span>有单位元 <span class="math inline">\(i=1,\cdots,n\)</span></p></li>
+</ol></li>
+</ol>
+<h4 id="环的性质">环的性质</h4>
+<p><span class="math inline">\(Prop:\)</span>设<span class="math inline">\(R\)</span>为环，则</p>
+<ol type="1">
+<li><p><span class="math inline">\(0\cdot a=0=a\cdot0\quad \forall a \in R\)</span></p></li>
+<li><p><span class="math inline">\((-a)\cdot b=-(ab)=a\cdot(-b),(-a)\cdot(-b)=ab\quad\forall a,b\in R\)</span></p></li>
+<li><p><span class="math inline">\(R\)</span>的单位元若存在则必定唯一</p></li>
+<li><p><span class="math inline">\(R\)</span>的单位元若存在且<span class="math inline">\(R\)</span>不是<span class="math inline">\(0\)</span>环，则<span class="math inline">\(1\not=0\)</span></p></li>
+</ol>
+<p><span class="math inline">\(Proof:\)</span></p>
+<ol type="1">
+<li><p><span class="math inline">\(0\cdot a+0\cdot a=(0+0)\cdot a=0\cdot a\)</span> 由加法消去有<span class="math inline">\(0\cdot a=0\)</span>，同理<span class="math inline">\(a\cdot 0=0\)</span></p></li>
+<li><p><span class="math inline">\((-a)\cdot b+ab=(-a+a)\cdot=0\cdot b=0\)</span> <span class="math inline">\(a\cdot(-b)+ab=a\cdot(-b+b)=a\cdot0=0\)</span>，从而<span class="math inline">\((-a)\cdot b=-(ab)=a\cdot(-b)\)</span>，从而<span class="math inline">\((-a)(-b)=ab\)</span></p></li>
+<li><p>反证</p></li>
+<li><p>若<span class="math inline">\(1=0\)</span>，则<span class="math inline">\(\forall 0\not=a\in R,a\cdot1=a=a\cdot0=0\)</span>，矛盾。故<span class="math inline">\(1\not=0\)</span></p></li>
+</ol>
+<h4 id="零因子">零因子</h4>
+<p>对于环<span class="math inline">\(R\)</span>，若有<span class="math inline">\(a,b\in R\quad a\not=0,b\not=0,ab=0\)</span></p>
+<p>则称<span class="math inline">\(a\)</span>为<span class="math inline">\(R\)</span>的一个左零因子，<span class="math inline">\(b\)</span>称为<span class="math inline">\(R\)</span>的一个右零因子</p>
+<p><span class="math inline">\(R\)</span>中有左零因子和右零因子统称有零因子</p>
+<p>若<span class="math inline">\(R\)</span>无零因子，称其为无零因子环，否则称有零因子环。</p>
+<h5 id="例子-1">例子</h5>
+<p><span class="math inline">\(\mathbb{F}\)</span>上的全矩阵环：有零因子环</p>
+<p><span class="math inline">\(\mathbb{Z,Q,R,C}\)</span>：无零因子环</p>
+<p><span class="math inline">\(\mathbb{Z_6}\)</span>：<span class="math inline">\(\bar{2}\cdot\bar{3}=\bar{0}\)</span> 故<span class="math inline">\(2,3\)</span>为零因子，有零因子环</p>
+<p><span class="math inline">\(\mathbb{Z_5}\)</span>：无零因子环</p>
+<p><em>注意：有左零因子<span class="math inline">\(\Leftrightarrow\)</span>有右零因子，但是左（右）零因子未必是右（左）零因子，例子如下</em></p>
+<p>设</p>
+<p><span class="math display">\[
+R=\{\left[\begin{array}{cc}
+0 &amp;0\\
+x&amp;y\\
+\end{array}\right]\}
+\]</span></p>
+<h3 id="子环和子域4-29">子环和子域(4-29)</h3>
+<h4 id="定义-1">定义</h4>
+<p>设<span class="math inline">\((R,+,\cdot)\)</span>是一个环（域），<span class="math inline">\(\emptyset \not =S \subset R\)</span> ，若$S <span class="math inline">\(关于\)</span>R<span class="math inline">\(的运算构成环（域），称\)</span>S<span class="math inline">\(为\)</span>R$的子环（域）。</p>
+<p>注：</p>
+<ol type="1">
+<li><p>由定义，<span class="math inline">\(S\)</span>为<span class="math inline">\(R\)</span>的子环，则<span class="math inline">\((S,+)\)</span>为<span class="math inline">\((R,+)\)</span>的子加群。</p></li>
+<li><p>R中的0元是S中的0元，S中元的负元是在R中的负元</p></li>
+<li><p><span class="math inline">\(S\)</span>为<span class="math inline">\(R\)</span>的子域，则<span class="math inline">\((S,+)\)</span>为<span class="math inline">\((R,+)\)</span>子加群，<span class="math inline">\((S^*,\cdot)\)</span>为<span class="math inline">\((R,\cdot)\)</span>子乘群（Abel）群</p></li>
+</ol>
+<h5 id="定理1">定理1</h5>
+<p>设<span class="math inline">\(R\)</span>为一个环，<span class="math inline">\(\empty\not=S\sub R\)</span>，则<span class="math inline">\(S\)</span>为<span class="math inline">\(R\)</span>的子环<span class="math inline">\(\Leftrightarrow\)</span></p>
+<ol type="1">
+<li><span class="math inline">\((S,+)\)</span>为<span class="math inline">\((R,+)\)</span>的子加群</li>
+</ol>
+<p>(2)<span class="math inline">\(\forall a,b\in S, ab\in S\)</span></p>
+<h5 id="定理2">定理2</h5>
+<p>设<span class="math inline">\(R\)</span>为一个环，<span class="math inline">\(\empty\not=S\sub R\)</span>，则<span class="math inline">\(S\)</span>为<span class="math inline">\(R\)</span>的子环<span class="math inline">\(\Leftrightarrow\)</span></p>
+<p>(1)<span class="math inline">\(\forall a,b\in S,a-b\in S\quad(a+b\in S,-a\in S)\)</span></p>
+<p>(2)<span class="math inline">\(\forall a,b\in S, ab\in S\)</span></p>
+<h5 id="定理3">定理3</h5>
+<p>设<span class="math inline">\(K\)</span>为域,<span class="math inline">\(\empty\not=F\sub K\)</span>,则<span class="math inline">\(F\)</span>为<span class="math inline">\(K\)</span>的子域<span class="math inline">\(\Leftrightarrow\)</span></p>
+<p><span class="math inline">\(\forall a,b\in F, c,d\in F^*\)</span>有<span class="math inline">\(a-b\in F,cd^{-1}\in F^*\)</span></p>
+<p>如:<span class="math inline">\(\{a+b\sqrt{-1}|a,b\in \mathbb{Q}\}\sub \mathbb{C}\)</span> 是<span class="math inline">\(\mathbb{C}\)</span>的子域</p>
+<p>但<span class="math inline">\(\{a+b\sqrt{-1}|a,b\in\Z\}\)</span>不是<span class="math inline">\(\mathbb{C}\)</span>的子域</p>
+<h4 id="例子-2">例子</h4>
+<p><strong>例1</strong>:<span class="math inline">\(\{0\},R\)</span>均为<span class="math inline">\(R\)</span>的子环(平凡子环)</p>
+<p><strong>例2</strong>:对<span class="math inline">\((\Z,+,\times)\)</span>,<span class="math inline">\(S=\{n\Z\}\)</span>是<span class="math inline">\(\Z\)</span>的子环</p>
+<p>特别的:<span class="math inline">\(2\Z\)</span>是<span class="math inline">\(\Z\)</span>的子环,但<span class="math inline">\(2\Z\)</span>没有单位元.</p>
+<p><strong>例3</strong>:求<span class="math inline">\(\Z_{18}\)</span>的所有子环</p>
+<p>    解:由群论已有结论<span class="math inline">\(\Z_{18}\)</span>的所有子加群<span class="math inline">\(\langle\bar{1}\rangle,\langle\bar{2}\rangle,\langle\bar{3}\rangle,\langle\bar{6}\rangle,\langle\bar{9}\rangle,\langle\bar{0}\rangle\)</span></p>
+<p>    <span class="math inline">\(\langle\bar{1}\rangle=\Z_{18}\)</span>,<span class="math inline">\(\langle\bar{2}\rangle=\{\bar{0},\bar{2},\bar{4},\bar{6},\bar{8},\overline{10},\overline{12},\overline{14},\overline{16}\}\)</span> ,<span class="math inline">\(\langle\bar{3}\rangle=\{\bar{0},\bar{3},\bar{6},\bar{9},\overline{12},\overline{15}\}\)</span> ,<span class="math inline">\(\langle\bar{6}\rangle=\{\bar{0},\bar{6},\overline{12}\}\)</span> ,<span class="math inline">\(\langle\bar{9}\rangle=\{\bar{0},\bar{9}\}\)</span> 故所有的子加群即为它所有的子环,共六个.</p>
+<p><strong>例4</strong>:设<span class="math inline">\(R\)</span>为环，证明<span class="math inline">\(C(R)=\{r\in R|rs=sr \quad\forall s\in R\}\)</span>为<span class="math inline">\(R\)</span>的一个子环（称为环<span class="math inline">\(R\)</span>的中心）</p>
+<p>证明：<span class="math inline">\(\because 0\in C(R)\quad \therefore \empty\not=C(R)\sub R\)</span></p>
+<p><span class="math inline">\(\forall r_1,r_2\in C(R) \forall s\in R\)</span>有<span class="math inline">\((r_1-r_2)s=r_1s-r_2s=sr_1+s(-r_2)=s(r_1-r_2)\)</span></p>
+<p><span class="math inline">\(\therefore r_1-r_2\in C(R)\)</span></p>
+<p><span class="math inline">\(r_1r_2s=(r_1s)r_2=sr_1r_2\)</span> <span class="math inline">\(\therefore r_1r_2\in C(R)\)</span></p>
+<p>故<span class="math inline">\(C(R)\)</span>为<span class="math inline">\(R\)</span>的子环</p>
+<h2 id="理想商环和环同态">理想，商环和环同态</h2>
+<h3 id="理想">理想</h3>
+<h4 id="定义-2">定义</h4>
+<p>设<span class="math inline">\(R\)</span>为环，<span class="math inline">\(\empty \not =I\sub R\)</span> ，若<span class="math inline">\(I\)</span>满足</p>
+<p>1.<span class="math inline">\(\forall r_1,r_2 \in I\)</span>，有<span class="math inline">\(r_1-r_2\in I\)</span></p>
+<p>2.$r I,s R <span class="math inline">\(有\)</span>rs,srI$</p>
+<p>称<span class="math inline">\(I\)</span>为<span class="math inline">\(R\)</span>的一个理想(ideal).若<span class="math inline">\(I\subsetneq R\)</span> ，称<span class="math inline">\(I\)</span>为真理想</p>
+<p>注：<span class="math inline">\({0}\)</span>和<span class="math inline">\(R\)</span>为<span class="math inline">\(R\)</span>的平凡理想（trivial ideal）.</p>
+<h5 id="例子-3">例子</h5>
+<h6 id="求z的全部理想">1.求<span class="math inline">\(\Z\)</span>的全部理想</h6>
+<p>解：由前知，<span class="math inline">\(\Z\)</span>的全部子环为<span class="math inline">\(\{m\Z|m=0,1,2,\cdots\}\)</span>吸收性满足。所以其即为<span class="math inline">\(\Z\)</span>的全部理想。</p>
+<h4 id="理想的性质">理想的性质</h4>
+<h5 id="定理1-1">定理1:</h5>
+<p><strong>设<span class="math inline">\(R\)</span>为环，<span class="math inline">\(I,J\)</span>都是<span class="math inline">\(R\)</span>的理想，则<span class="math inline">\(I+J,I\cap J,IJ\)</span>均为<span class="math inline">\(R\)</span>的理想</strong></p>
+<p>证明：(i). <span class="math inline">\(I+J=\{a+b|a\in I,b\in J\}\)</span>,<span class="math inline">\(I\cap J=\{a\in R| a\in I,a\in J\}\)</span>,<span class="math inline">\(IJ=\{\sum_{i=1}^{m}a_ib_i|a_i\in I,b_i\in J\}\)</span></p>
+<p><span class="math inline">\(I+J\)</span>为<span class="math inline">\(R\)</span>的子加群，<span class="math inline">\(I\cap J\)</span>为<span class="math inline">\(R\)</span>的子加群</p>
+<p><span class="math inline">\(\forall r\in R,\alpha \in I+J, \alpha=a+b \quad a\in I,b\in J\)</span>有</p>
+<p><span class="math display">\[
+r\alpha=r(a+b)=ra+rb \in I+J
+\]</span></p>
+<p>同理<span class="math inline">\(\alpha r\in I+J\)</span>，故<span class="math inline">\(I+J\)</span>为<span class="math inline">\(R\)</span>的理想</p>
+<p>(ii). <span class="math inline">\(\forall \alpha \in I\cap J\quad r\alpha \in I\cap J \quad \alpha r\in I\cap J\)</span></p>
+<p>故<span class="math inline">\(I\cap J\)</span>是<span class="math inline">\(R\)</span>的理想</p>
+<p>(iii).<span class="math inline">\(\forall \alpha,\beta\in IJ\)</span>，设<span class="math inline">\(\alpha=\sum_i a_ib_i,\beta=\sum_j c_jd_j,a_i,c_j\in I, b_i,d_j\in J\)</span></p>
+<p>有<span class="math inline">\(\alpha-\beta=\sum_ia_ib_i-\sum c_jd_j=\sum_ia_ib_i+\sum(-c_j)d_j\in IJ\)</span></p>
+<p><span class="math inline">\(\forall r\in R\quad r\alpha=\sum_i(ra_i)b_i\in IJ,\alpha r=\sum_i a_i(b_ir)\in IJ\)</span></p>
+<p>故<span class="math inline">\(IJ\)</span>是<span class="math inline">\(R\)</span>的理想</p>
+<p>注：推广到任意有限多个，即<span class="math inline">\(\{I_i|i=1,\cdots,n\}\)</span>均为<span class="math inline">\(R\)</span>的理想，</p>
+<p>则<span class="math inline">\(\sum_{i=1}^n I_i,\bigcap_i I_i,\prod_{i=1}^n I_i\)</span>均为<span class="math inline">\(R\)</span>的理想。</p>
+<p>有<span class="math inline">\(\prod_{i=1}^n I_i\sub \bigcap_i I_i \sub I_i\sub \sum_{i=1}^n I_i\)</span></p>
+<h5 id="例子-4">例子</h5>
+<p>在环<span class="math inline">\((\Z,+,\cdot)\)</span>中，设<span class="math inline">\(H=\{4k|k\in\Z\},N=\{6l|l\in\Z\}\)</span>,则<span class="math inline">\(H,N\)</span>均为<span class="math inline">\(\Z\)</span>的理想</p>
+<p><span class="math inline">\(H+N=\{4k+6l|k,l\in\Z\}=\{2m|m\in\Z\}\)</span>,</p>
+<p><span class="math inline">\(HN=\{\sum24kl|k,l\in\Z\}\)</span>,<span class="math inline">\(H\cap N=\{12k|k\in\Z\}\)</span></p>
+<h4 id="单环">单环</h4>
+<h5 id="定义-3">定义</h5>
+<p>环<span class="math inline">\(R\)</span>,若<span class="math inline">\(R\)</span>没有非平凡理想,则称<span class="math inline">\(R\)</span>为单环.</p>
+<h6 id="推论">推论</h6>
+<p>设<span class="math inline">\(F\)</span>为域,则<span class="math inline">\(F\)</span>上的全矩阵环<span class="math inline">\(M_n(F)\)</span>是单环</p>
+<p>证明:设<span class="math inline">\(\forall I\)</span>是<span class="math inline">\(M_n(F)\)</span>的理想 <span class="math inline">\(I\not=\{0\}\)</span> 则取<span class="math inline">\(A=(a_{ij})_{n\times n}\in I,A\not=0\)</span></p>
+<p>不妨设<span class="math inline">\(a_{kl}\not=0\)</span>,故有<span class="math inline">\(a^{-1}_{kl}E_{ik}AE_{li}=E_{ii}\in I\)</span>,</p>
+<p>从而<span class="math inline">\(e=E=\sum_{i=1}^n E_{ii}\in I\)</span> ,从而由吸收性有<span class="math inline">\(\forall B\in M_n(F),B\cdot E=B\in I\)</span></p>
+<p>故<span class="math inline">\(I=M_n(F)\)</span>.从而<span class="math inline">\(M_n(F)\)</span>为单环.</p>
+<p><em>注:<span class="math inline">\(M_n(\Z)\)</span>整数环上的矩阵环就不是单环</em>(取<span class="math inline">\(I=M_n(2\Z)\)</span>则<span class="math inline">\(I\)</span>为<span class="math inline">\(M_n(F)\)</span>的非平凡理想)</p>
+<p>若<span class="math inline">\(1\in I\)</span>,则<span class="math inline">\(\forall x\in R,x\cdot1=x\in I\)</span>,<span class="math inline">\(R\)</span>是单环(由此可知柱和域都是单环).</p>
+<h4 id="理想的构造">理想的构造</h4>
+<h5 id="主理想">主理想</h5>
+<p><span class="math inline">\(R\)</span>为环,<span class="math inline">\(a\in R\)</span>,令<span class="math inline">\(\Sigma=\{包含a的R的所有理想\}\)</span>.则<span class="math inline">\(\Sigma\not=\empty\)</span></p>
+<p>令<span class="math inline">\(\langle a\rangle=\bigcap_{I\in\Sigma} I\)</span>则<span class="math inline">\(\langle a\rangle\)</span>为<span class="math inline">\(R\)</span>的理想</p>
+<p>称为由<span class="math inline">\(a\)</span>生成的主理想(principal ideal)</p>
+<h5 id="主理想的构成">主理想的构成</h5>
+<h6 id="定理1-2">定理1</h6>
+<p>设<span class="math inline">\(R\)</span>为环,<span class="math inline">\(a\in R\)</span>,则</p>
+<p>(i).<span class="math inline">\(\langle a\rangle=\{\sum_ix_iay_i+xa+ay+ma|x_i,y_i,x,y\in R,m\in\Z\}\)</span></p>
+<p>(ii).若<span class="math inline">\(1\in R\)</span>,则<span class="math inline">\(\langle a\rangle=\{\sum_ix_iay_i|x_i,y_i\in R\}\)</span></p>
+<p>(iii).若<span class="math inline">\(R\)</span>交换,则<span class="math inline">\(\langle a\rangle=\{xa+ma|x\in R,m\in\Z\}\)</span></p>
+<p>(iv).若<span class="math inline">\(R\)</span>有单位元的交换环,则<span class="math inline">\(\langle a\rangle=\{ar|r\in R\}=aR\)</span></p>
+<p>证明:</p>
+<p>(i).式子右边记为<span class="math inline">\(I\)</span>,<span class="math inline">\(\forall J\in \Sigma,x_iay_i\in j.xa,ay,ma\in J\)</span></p>
+<p>故<span class="math inline">\(I\sub J\)</span>从而<span class="math inline">\(I\sub \bigcap_{J\in\Sigma} J\)</span></p>
+<p><span class="math inline">\(\forall b,c\in I\)</span>,明显地有<span class="math inline">\(b-c\in I,rb,br\in I\quad \forall r\in R\)</span></p>
+<p>故<span class="math inline">\(I\)</span>是<span class="math inline">\(R\)</span>的理想,<span class="math inline">\(a\in I\)</span>,从而<span class="math inline">\(I=\langle a\rangle\)</span>.</p>
+<p>故(i)成立</p>
+<p>(ii).若<span class="math inline">\(1\in R\)</span>,<span class="math inline">\(xa=xa\cdot 1,ay=1\cdot ay ma=m\cdot 1\cdot a=(m\cdot 1)a\cdot1\)</span></p>
+<p>故<span class="math inline">\(\langle a \rangle=\{\sum_i x_iay_i|x_i,y_i\in R\}\)</span></p>
+<p>(iii).若<span class="math inline">\(R\)</span>交换,则<span class="math inline">\(x_iay_i=x_iy_ia,ay=ya\)</span>从而</p>
+<p><span class="math inline">\(\langle a\rangle=\{xa+ma|x\in R,m\in \Z\}\)</span></p>
+<p>(iv).若<span class="math inline">\(1\in R,R\)</span>交换,故有<span class="math inline">\(ma=(m1)\cdot a=(m1)\cdot a\)</span></p>
+<p>从而<span class="math inline">\(\langle a \rangle=\{xa|x\in R\}=aR=Ra\)</span></p>
+<h6 id="例子-5">例子:</h6>
+<p><span class="math inline">\((\Z,+,\cdot)\)</span>所有理想<span class="math inline">\(\{m\Z\}=\langle m\rangle\)</span>(也是主理想)</p>
+<p><span class="math inline">\((\Z_n,+,\cdot)\)</span>所有理想<span class="math inline">\(\langle \bar{m}\rangle\)</span> (<span class="math inline">\(m\in \Z_+,m|n\)</span>)(也是主理想)</p>
+<p>一般地,若<span class="math inline">\(S=\{a_1,\cdots,a_n\}\sub R\)</span></p>
+<p>令<span class="math inline">\(\langle a_1,\cdots.a_n\rangle=\langle a_1\rangle+\langle a_2\rangle+\cdots+\langle a_n\rangle\)</span> ,记为<span class="math inline">\(\langle S\rangle\)</span></p>
+<p>称为由<span class="math inline">\(S\)</span>生成的理想.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://wortalicia.github.io/2022/03/12/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%AE%80%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -510,12 +752,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
