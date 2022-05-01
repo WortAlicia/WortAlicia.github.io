@@ -182,7 +182,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-30 08:56:16" itemprop="dateModified" datetime="2022-04-30T08:56:16+08:00">2022-04-30</time>
+                <time title="修改时间：2022-05-01 15:10:55" itemprop="dateModified" datetime="2022-05-01T15:10:55+08:00">2022-05-01</time>
               </span>
 
           
@@ -198,7 +198,7 @@
       
           <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>前言：在博客建好以后将近一个月，Alicia终于想起了要在博客上写笔记的计划......</p>
 <p>SJTU抽象代数课程环论部分的笔记</p>
-<h2 id="基本概念4-27尚未补完">基本概念(4-27)(尚未补完)</h2>
+<h2 id="基本概念4-27">基本概念(4-27)</h2>
 <h3 id="环的定义与性质">环的定义与性质</h3>
 <h4 id="定义">定义</h4>
 <p> 对于非空集合<span class="math inline">\(R\)</span>，在<span class="math inline">\(R\)</span>上定义运算<span class="math inline">\(+\)</span>，<span class="math inline">\(\cdot\)</span> 满足：</p>
@@ -268,8 +268,80 @@
 R=\{\left[\begin{array}{cc}
 0 &amp;0\\
 x&amp;y\\
-\end{array}\right]\}
+\end{array}\right]|x,y\in \mathbb{R}\}
 \]</span></p>
+<p>成环，求其零因子</p>
+解：$(
+<span class="math display">\[\begin{array}{cc}
+0 &amp;0\\
+x&amp;y\
+\end{array}\]</span>
+\end{array}) <span class="math inline">\(由\)</span>(
+<span class="math display">\[\begin{array}{cc}0&amp;0\\a&amp;0\end{array}\]</span>
+<p>)$ <span class="math inline">\(\left(\begin{array}{cc}0 &amp;0\\x&amp;y\\\end{array}\right)\)</span>=<span class="math inline">\(\left(\begin{array}{cc}0 &amp;0\\0&amp;0\\\end{array}\right)\)</span></p>
+<p><span class="math inline">\(\therefore R\)</span>中每个非零元都是右零因子，且<span class="math inline">\(\left(\begin{array}{cc}0&amp;0\\a&amp;0\\\end{array}\right),a\not=0\)</span>是左零因子</p>
+但是<span class="math inline">\(a\not=0,\left(\begin{array}{cc}0&amp;0\\*&amp;a\\\end{array}\right)\)</span> <span class="math inline">\(\left(\begin{array}{cc}0&amp;0\\x&amp;y\\\end{array}\right)\)</span> $=(
+<span class="math display">\[\begin{array}{cc}0&amp;0\\ax&amp;ay\\\end{array}\]</span>
+)=(
+<span class="math display">\[\begin{array}{cc}0&amp;0\\0&amp;0\\\end{array}\]</span>
+<p>)x=0,y=0 $</p>
+<p><span class="math inline">\(\therefore \left(\begin{array}{cc}0&amp;0\\x&amp;a\\\end{array}\right)\)</span> 不是左零因子</p>
+<h5 id="定理">定理</h5>
+<p><strong>环<span class="math inline">\(R\)</span> 中没有左（右）零因子<span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(R\)</span> 中左（右）消去成立</strong></p>
+<p>证明（只证明对左零因子）：</p>
+<p><span class="math inline">\(\Rightarrow:a\not =0,ab=ac\Rightarrow a(b-c)=0 \stackrel{\because 无左零因子}{\Longrightarrow}b-c=0,b=c\)</span></p>
+<p><span class="math inline">\(\Leftarrow:\forall a\not=0,a\in R\)</span>,若<span class="math inline">\(\exist ab=0\)</span>,则<span class="math inline">\(ab=a\cdot0=0\)</span>,由左消去律有<span class="math inline">\(b=0\)</span></p>
+<p><span class="math inline">\(\therefore R\)</span>无左零因子</p>
+<h4 id="单位">单位</h4>
+<p>设<span class="math inline">\(R\)</span>有单位元<span class="math inline">\(1\)</span> ,<span class="math inline">\(a\in R^*\)</span>(非零元所成的集合),若<span class="math inline">\(a\)</span>有逆元,则称<span class="math inline">\(a\)</span>为<span class="math inline">\(R\)</span>的单位</p>
+<p>记<span class="math inline">\(U(R)=\{R中所有单位\}\)</span></p>
+<p><span class="math inline">\(\forall a,b\in U(R),ab\cdot b^{-1}a^{-1}=1\Rightarrow ab\in U(R),a^{-1}\in U(R)\)</span></p>
+<p>故<span class="math inline">\(U(R)\)</span>成群,称为<span class="math inline">\(R\)</span>的单位群</p>
+<p>如<span class="math inline">\(U(\mathbb{Z}_6)=\{\bar{1},\bar{5}\},U(\mathbb{Z}_5)=\mathbb{Z}_5^*\)</span></p>
+<h3 id="环的分类">环的分类</h3>
+<h4 id="整环">整环</h4>
+<p>有单位元,无零因子,交换的非零环</p>
+<p>例子:<span class="math inline">\((\mathbb{Z},+,\times),(\mathbb{Q},+,\times),(\mathbb{C},+,\times),\mathbb{Z}[x],\mathbb{Q}[x],\mathbb{C}[x],\mathbb{Z}_p(p:prime)\)</span></p>
+<h5 id="例高斯整环">例(高斯整环)</h5>
+<p><span class="math inline">\(\mathbb{Z}[i]=\{a+bi|a,b\in\mathbb{Z}\}\)</span>是整环(高斯整环),求<span class="math inline">\(\mathbb{Z}[i]\)</span>的单位</p>
+<p>解:设<span class="math inline">\(\alpha\in\mathbb{Z[i]},\alpha\not=0,\alpha\)</span>为单位,<span class="math inline">\(\alpha=a+bi\)</span>.</p>
+<p>则<span class="math inline">\(\exist x=x+yi\in\mathbb{Z[i]},s.t.\quad \alpha x=1\)</span>有<span class="math inline">\(|\alpha|^2|x|^2=1,i.e(a^2+b^2)(x^2+y^2)=1\)</span></p>
+<p><span class="math inline">\(\therefore a^2+b^2=1\)</span> 有<span class="math inline">\(\begin{cases}a=\pm1\\b=0\end{cases}\)</span>或<span class="math inline">\(\begin{cases}a=0\\b=\pm1\end{cases}\)</span></p>
+<p><span class="math inline">\(U(\mathbb{Z}[i])=\{1,-1,i,-i\}\cong\mathbb{Z}_4\)</span></p>
+<h4 id="除环体">除环(体)</h4>
+<p>环<span class="math inline">\(R\not=\{0\}\)</span> <span class="math inline">\((R^*,\cdot)\)</span>成群,称<span class="math inline">\(R\)</span>为除环</p>
+<p>注:</p>
+<ol type="1">
+<li><p><span class="math inline">\(R\)</span>为除环,则<span class="math inline">\(R\)</span>至少含有<span class="math inline">\(0,1\)</span></p></li>
+<li><p><span class="math inline">\(U(R)=R^*\)</span></p></li>
+</ol>
+<p>例:<span class="math inline">\((\mathbb{Q},+,\times)\)</span>,<span class="math inline">\((\mathbb{R},+,\times),(\mathbb{C},+,\times)\)</span></p>
+<p>例:设<span class="math inline">\(e=\left(\begin{array}{cc}1&amp;0\\0&amp;1\\\end{array}\right),i=\left(\begin{array}{cc}i&amp;0\\0&amp;i\\\end{array}\right),j=\left(\begin{array}{cc}0&amp;1\\-1&amp;0\\\end{array}\right),k=\left(\begin{array}{cc}0&amp;i\\i&amp;0\\\end{array}\right)\)</span></p>
+<p><span class="math inline">\(H=\{a_0e+a_1i+a_2j+a_3k|a_i\in R,i=0,1,2,3\}\)</span></p>
+<p>则有<span class="math inline">\(i^2=j^2=k^2=-e,ij=-ji=k,jk=-kj=i,ki=-ik=j\)</span></p>
+<p>故<span class="math inline">\(H\)</span>对矩阵乘法和加法成环</p>
+<p><span class="math inline">\(\forall q\in H^*,q=\left(\begin{array}{cc}u&amp;v\\-\bar{v}&amp;\bar{u}\\\end{array}\right)=\left(\begin{array}{cc}a_0+a_1i&amp;a_2+a_3i\\-a_2+a_3i&amp;a_0-a_1i\\\end{array}\right)\)</span> (<span class="math inline">\(a_i\)</span>不全为0)</p>
+<p><span class="math inline">\(q=|u|^2+|v|^2=a_0^2+a_1^2+a_2^2+a_3^2\not=0\)</span></p>
+<p>故<span class="math inline">\(q\)</span>有逆元,从而<span class="math inline">\(H\)</span>为一个除环,非交换(实四元数环)</p>
+<p>又称<span class="math inline">\(\text{Hamilton四元数体}\)</span></p>
+<h5 id="定理-1">定理</h5>
+<p>环<span class="math inline">\(R\not=\{0\}\)</span>有限,<span class="math inline">\(R\)</span>无左右零因子,<span class="math inline">\(R\)</span>为除环</p>
+<p>证明:<span class="math inline">\((R^*,\cdot)\)</span>半群,因满足左右消去律成群,故<span class="math inline">\(R\)</span>为除环</p>
+<h4 id="域">域</h4>
+<p>交换的除环(即,<span class="math inline">\((R,+),(R,\cdot)\)</span>均为<span class="math inline">\(\text{Abel}\)</span>群)</p>
+<p>例子:如<span class="math inline">\(\mathbb{Q},\mathbb{R},\mathbb{C},\mathbb{Z_p}\)</span></p>
+<p>具有有限个元素的域称为有限域</p>
+<h5 id="定理-2">定理</h5>
+<p><strong><span class="math inline">\(\mathbb{Z_p}\)</span>是域<span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(n\)</span> 为素数</strong></p>
+<p>证明:<span class="math inline">\(\Rightarrow:\)</span> 反证,设<span class="math inline">\(n=n_1n_2,n_1,n_2&gt;1\)</span> 则有<span class="math inline">\(\overline{n_1},\overline{n_2}=\bar{0}\)</span></p>
+<p>而<span class="math inline">\(\overline{n_1},\overline{n_2}\not=0\)</span> 故<span class="math inline">\(\mathbb{Z}_n\)</span>有零因子,与<span class="math inline">\(\mathbb{Z}_n\)</span>为域矛盾</p>
+<p><span class="math inline">\(\therefore n\)</span>为素数</p>
+<p><span class="math inline">\(\Leftarrow:\)</span>设<span class="math inline">\(p\)</span>为素数,从而<span class="math inline">\(\mathbb{Z}_p\not=\{\bar{0}\}\)</span></p>
+<p><span class="math inline">\(\forall \bar{k}\in\mathbb{Z}_p^*\)</span> 由<span class="math inline">\((k,p)=1\)</span>,<span class="math inline">\(\exist a,b\in \mathbb{Z}\)</span>,使得<span class="math inline">\(ak+bp=1\)</span>,有<span class="math inline">\(\bar{a}\bar{k}=\bar{1}\)</span>.</p>
+<p>故<span class="math inline">\(a\)</span>有逆元,<span class="math inline">\(\bar{1}\in \mathbb{Z}_p\)</span> .从而<span class="math inline">\((\mathbb{Z_p^*},\cdot)\)</span>成群且交换,故<span class="math inline">\(\mathbb{Z}_p\)</span>为域</p>
+<p><em>注:<span class="math inline">\(\mathbb{Z}_p\)</span>是最简单的有限域</em></p>
+<h5 id="推论">推论</h5>
+<p>有限整环是域</p>
 <h3 id="子环和子域4-29">子环和子域(4-29)</h3>
 <h4 id="定义-1">定义</h4>
 <p>设<span class="math inline">\((R,+,\cdot)\)</span>是一个环（域），<span class="math inline">\(\emptyset \not =S \subset R\)</span> ，若<span class="math inline">\(S\)</span>关于<span class="math inline">\(R\)</span>的运算构成环（域），称<span class="math inline">\(S\)</span>为<span class="math inline">\(R\)</span>的子环（域）。</p>
@@ -318,7 +390,7 @@ x&amp;y\\
 <h5 id="例子-3">例子</h5>
 <h6 id="求mathbbz的全部理想">1.求<span class="math inline">\(\mathbb{Z}\)</span>的全部理想</h6>
 <p>解：由前知，<span class="math inline">\(\mathbb{Z}\)</span>的全部子环为<span class="math inline">\(\{m\mathbb{Z}|m=0,1,2,\cdots\}\)</span>吸收性满足。所以其即为<span class="math inline">\(\mathbb{Z}\)</span>的全部理想。</p>
-<h4 id="理想的性质">理想的性质</h4>
+<h4 id="性质">性质</h4>
 <h5 id="定理1-1">定理1:</h5>
 <p><strong>设<span class="math inline">\(R\)</span>为环，<span class="math inline">\(I,J\)</span>都是<span class="math inline">\(R\)</span>的理想，则<span class="math inline">\(I+J,I\cap J,IJ\)</span>均为<span class="math inline">\(R\)</span>的理想</strong></p>
 <p>证明：</p>
@@ -345,7 +417,7 @@ r\alpha=r(a+b)=ra+rb \in I+J
 <h4 id="单环">单环</h4>
 <h5 id="定义-3">定义</h5>
 <p>环<span class="math inline">\(R\)</span>,若<span class="math inline">\(R\)</span>没有非平凡理想,则称<span class="math inline">\(R\)</span>为单环.</p>
-<h6 id="推论">推论</h6>
+<h6 id="推论-1">推论</h6>
 <p>设<span class="math inline">\(F\)</span>为域,则<span class="math inline">\(F\)</span>上的全矩阵环<span class="math inline">\(M_n(F)\)</span>是单环</p>
 <p>证明:设<span class="math inline">\(\forall I\)</span>是<span class="math inline">\(M_n(F)\)</span>的理想 <span class="math inline">\(I\not=\{0\}\)</span> 则取<span class="math inline">\(A=(a_{ij})_{n\times n}\in I,A\not=0\)</span></p>
 <p>不妨设<span class="math inline">\(a_{kl}\not=0\)</span>,故有<span class="math inline">\(a^{-1}_{kl}E_{ik}AE_{li}=E_{ii}\in I\)</span>,</p>
