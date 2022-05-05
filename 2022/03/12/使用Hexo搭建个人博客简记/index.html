@@ -24,14 +24,14 @@
 <meta property="og:site_name" content="Alicia&#39;s Blog">
 <meta property="og:description" content="写在前面 如果本地(-s)正常，deploy上去挂掉了：建议等待一会并清除浏览器缓存后刷新，一般是缓存问题。 如果出现了莫名其妙的显示异常：先尝试hexo clean！ Hexo博客基本部分搭建 获取域名 由于对域名（仅用于个人网站）和服务器暂时没有什么较大的需求，直接使用Github Pages作为个人博客运作。 登录到Github后直接创建新仓库New Repository，仓">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="d:/MinakamiYuki/Blog/blog/source/img/font.png">
+<meta property="og:image" content="https://wortalicia.github.io/img/bg/IMG_3519.png">
 <meta property="article:published_time" content="2022-03-12T10:58:29.000Z">
-<meta property="article:modified_time" content="2022-05-04T14:48:22.829Z">
+<meta property="article:modified_time" content="2022-05-04T15:02:19.448Z">
 <meta property="article:author" content="Alicia_Margatroid">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="博客搭建">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="d:/MinakamiYuki/Blog/blog/source/img/font.png">
+<meta name="twitter:image" content="https://wortalicia.github.io/img/bg/IMG_3519.png">
   
   
   <title>使用Hexo搭建个人博客简记 - Alicia&#39;s Blog</title>
@@ -175,7 +175,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/bg/IMG_3519.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -256,7 +256,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：几秒前
+                  本文最后更新于：11 小时前
                 
               </p>
             
@@ -348,7 +348,7 @@ id="数学公式支持和部分markdown语法适配转义相关">数学公式支
 <p>然后就按照通常操作即可</p>
 <h4 id="给文章添加标签分类">给文章添加标签分类</h4>
 <p>在文章的front-matter中添加即可，示例如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shortcode">title: 使用Hexo搭建个人博客简记<br>date: 2022-03-12 18:58:29<br>-------以上为原有内容----------<br>tags: [Hexo,博客搭建]<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shortcode">title: 使用Hexo搭建个人博客简记<br>date: 2022-03-12 18:58:29<br>-------以上为原有内容----------<br>tags: [Hexo,博客搭建]<br>categories: [网站技术]<br></code></pre></td></tr></table></figure>
 <h4
 id="添加数学公式支持hexo-renderer-pandocmathjax">添加数学公式支持（hexo-renderer-pandoc+Mathjax）</h4>
 <p>作为理科院系学生，发博文自然是离不开数学公式的。</p>
@@ -376,13 +376,10 @@ target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/">配
 <p>等我想起来有什么值得引入的第三方功能/效果再加进来吧。</p>
 <p>以及一些补充：</p>
 <h4 id="关于某些公式显示奇妙换行bug">关于某些公式显示奇妙换行BUG</h4>
-<p>mathjax的默认加载格式是cHTML(commonHTML)，在Fluid下似乎存在莫名其妙给公式换行的问题。修正方法：_modules-renderer-mathjax.html中修改渲染使用的预制配置文件，改为TeX-AMS-MML_HTMLorMML(最底下看着像这个的那段改掉)，之后默认使用的就是HTML-CSS方式处理，问题解决。</p>
+<p>mathjax的默认加载格式是cHTML(commonHTML)，在Fluid下似乎存在莫名其妙给公式换行的问题。修正方法：\node_modules\hexo-renderer-mathjax\mathjax.html中修改渲染使用的预制配置文件，改为TeX-AMS-MML_HTMLorMML(最底下看着像这个的那段改掉)，之后默认使用的就是HTML-CSS方式处理，问题解决。</p>
 <h4 id="关于引入外部字体">关于引入外部字体</h4>
 <p>暂且选择使用思源宋体，直接引用一下别人的</p>
-<figure>
-<img src="D:\MinakamiYuki\Blog\blog\source\img\font.png" srcset="/img/loading.gif" lazyload alt="ff" />
-<figcaption aria-hidden="true">ff</figcaption>
-</figure>
+<p><img src="/img/font.png" srcset="/img/loading.gif" lazyload /></p>
 <p>代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shortcode">// Font<br> $font-size = theme-config(&quot;font.font_size&quot;, &quot;16px&quot;)<br> $letter-spacing = theme-config(&quot;font.letter_spacing&quot;, &quot;0.02em&quot;)<br> $font-family = theme-config(&quot;font.font_family&quot;, &#x27;&quot;Noto Serif SC&quot;,var(--font-family-sans-serif)&#x27;)<br><br><br>font:<br>  font_size: 18px<br>  font_family: Noto Serif SC<br>  custom_css: https://fonts.proxy.ustclug.org/css2?family=Noto+Serif+SC&amp;display=swap<br>  letter_spacing: 0.02em<br>  code_font_size: 85%<br></code></pre></td></tr></table></figure>
 <p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv15222991">Hexo
@@ -618,6 +615,22 @@ style="display: inline-block; vertical-align: top; padding-right: 10px; margin-l
 <!-- 主题的启动项 保持在最底部 -->
 <script  src="/js/boot.js" ></script>
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 </body>
 </html>
