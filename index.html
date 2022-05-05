@@ -250,7 +250,7 @@
       <p class="index-excerpt">
         <a href="/2022/03/12/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%AE%80%E8%AE%B0/" target="_self">
           
-          第一部分：Hexo博客基本部分搭建 获取域名 由于对域名（仅用于个人网站）和服务器暂时没有什么较大的需求，直接使用Github Pages作为个人博客运作。 登录到Github后直接创建新仓库New Repository，仓库名为*github_username*.github.io [1] 安装Git并配置SSH Key 使用Git作为个人博客的版本控制系统。从Git - Downlo
+          写在前面 如果本地(-s)正常，deploy上去挂掉了：建议等待一会并清除浏览器缓存后刷新，一般是缓存问题。 如果出现了莫名其妙的显示异常：先尝试hexo clean！ Hexo博客基本部分搭建 获取域名 由于对域名（仅用于个人网站）和服务器暂时没有什么较大的需求，直接使用Github Pages作为个人博客运作。 登录到Github后直接创建新仓库New Repository，仓
         </a>
       </p>
 
@@ -263,6 +263,13 @@
             </time>
           </div>
         
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF/">网站技术</a>
+            
+          </div>
         
         
           <div class="post-meta">
@@ -405,22 +412,6 @@
 <!-- 主题的启动项 保持在最底部 -->
 <script  src="/js/boot.js" ></script>
 
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 </body>
 </html>
