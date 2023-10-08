@@ -1,1 +1,13 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">@font-face{font-family:PingFangSC;font-display:swap;src:url('../font/PingFangSC-Regular.ttf') format("truetype")}@font-face{font-family:'Noto Serif SC';font-display:swap;src:url('../font/NotoSerifSC-Regular.otf')}body{font-family:'Noto Serif SC'}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">@font-face {
+font-family: 'PingFangSC';
+font-display: swap;
+src: url('../font/PingFangSC-Regular.ttf') format("truetype");
+} 
+@font-face{
+font-family: 'Noto Serif SC';
+font-display: swap;
+src: url('../font/NotoSerifSC-Regular.otf');
+}
+body{
+font-family: 'Noto Serif SC';
+}
