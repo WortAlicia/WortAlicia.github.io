@@ -24,14 +24,14 @@
 <meta property="og:site_name" content="Alicia&#39;s Blog">
 <meta property="og:description" content="What is Registeration? Registeration refers to align two shapes&#x2F;scans (such as point clouds) give an intial guess for relative transform. Classifications of the task  Fully Overlap vs Partially O">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://wortalicia.github.io/img/bg/IMG_3519.png">
+<meta property="og:image" content="https://wortalicia.github.io/img/bg/52442920_p0.jpg">
 <meta property="article:published_time" content="2023-11-17T12:53:29.000Z">
-<meta property="article:modified_time" content="2023-11-19T01:36:37.355Z">
+<meta property="article:modified_time" content="2023-11-19T01:42:01.050Z">
 <meta property="article:author" content="Alicia_Margatroid">
 <meta property="article:tag" content="计算机图形学">
 <meta property="article:tag" content="三维重建">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://wortalicia.github.io/img/bg/IMG_3519.png">
+<meta name="twitter:image" content="https://wortalicia.github.io/img/bg/52442920_p0.jpg">
   
   
   <title>GAMES203-02 Registeration 配准 - Alicia&#39;s Blog</title>
@@ -256,7 +256,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：1 分钟前
+                  本文最后更新于：几秒前
                 
               </p>
             
@@ -293,8 +293,7 @@ reconstruction.)</p></li>
 <p>If we already know correct point correspondences, we could easily
 construct a error function from them. (suppose no non-rigid
 transformation, only rotation/translation)</p>
-<p><img
-src="C:\Users\KCCZY\AppData\Roaming\marktext\images\2023-11-18-20-25-03-image.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/img/imgs_games20302/2023-11-18-20-25-03-image.png" srcset="/img/loading.gif" lazyload /></p>
 <p><span class="math display">\[
 E:=\sum_i(R\mathrm{\bold{p_i}}+t-\mathrm{\bold{q_i}})^2
 \]</span></p>
@@ -309,8 +308,7 @@ cloud as its corresponding point.</p>
 find their nearest neighbors. Then according to the correspondence, we
 could solve it again using the method above. If starting poses are
 <strong>close enough</strong>, iteration will converge.</p>
-<p><img
-src="C:\Users\KCCZY\AppData\Roaming\marktext\images\2023-11-18-20-37-06-image.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/img/imgs_games20302/2023-11-18-20-37-06-image.png" srcset="/img/loading.gif" lazyload /></p>
 <ul>
 <li><p>The nearest neighbor pairs could be easily obtained with packages
 or using kd trees/ squared distance field.</p></li>
@@ -319,8 +317,7 @@ constraint the degrees of freedom than uniform sampling. See
 <em>Geometrically Stable Sampling for the ICP Algorithm</em>, Gelfand et
 al.</p></li>
 </ul>
-<p><img
-src="C:\Users\KCCZY\AppData\Roaming\marktext\images\2023-11-18-20-53-51-image.png" srcset="/img/loading.gif" lazyload /></p>
+<p><img src="/img/imgs_games20302/2023-11-18-20-53-51-image.png" srcset="/img/loading.gif" lazyload /></p>
 <h4 id="from-the-optimization-perspective">From the optimization
 perspective</h4>
 <p>The problem we are optimizing could be formulated as a least
@@ -375,7 +372,8 @@ with:</p>
 <ul>
 <li><p>Use robust functions/robust norm instead of L2 norm under
 point-2-plane distance metric.<img
-src="C:\Users\KCCZY\AppData\Roaming\marktext\images\2023-11-19-09-29-14-image.png" srcset="/img/loading.gif" lazyload /></p>
+src="/img/imgs_games20302/2023-11-19-09-29-14-image.png" srcset="/img/loading.gif" lazyload
+alt="loading-ag-2719" /></p>
 <p>like <span class="math inline">\(\rho_{GM} =
 \frac{t^2}{\sigma^2+t^2}\)</span> or L1 norm. Optimize still with
 Gauss-Newton.</p>
@@ -412,7 +410,7 @@ class="math inline">\(r_1\)</span> and <span
 class="math inline">\(v_1\)</span> are distant. thus in this way we can
 filter out those unmatched outliers.</p>
 <p><img
-src="C:\Users\KCCZY\AppData\Roaming\marktext\images\2023-11-19-09-29-52-image.png" srcset="/img/loading.gif" lazyload /></p></li>
+src="/img/imgs_games20302/2023-11-19-09-29-52-image.png" srcset="/img/loading.gif" lazyload /></p></li>
 </ul></li>
 </ul>
 <p>Variants of ICP see <a
